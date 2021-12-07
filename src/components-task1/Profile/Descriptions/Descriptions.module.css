@@ -3,8 +3,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  gap: 10px;
   background-color: azure;
+  width: 100%;
+  border-color: gray;
+  border-style: solid;
+  border-width: 1px;
+  padding: 40px;
 }
 .avatar {
   display: block;

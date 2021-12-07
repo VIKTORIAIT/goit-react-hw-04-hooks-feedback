@@ -1,21 +1,21 @@
-import PropTypes from "prop-types";
-import transaction from "../../data/transaction.json";
-import LiItemFourth from "../LiItemFourth";
+import PropTypes from 'prop-types';
+import transactions from '../../data/transaction.json';
+import LiItemFourth from './LiItemFourth';
+import styles from './Transaction.module.css';
 
 const TransactionHistory = () => {
-  //   const { id, type, amount, currency } = transaction;
-  const markupTr = transaction.map(({ id, type, amount, currency }) => {
+  const markupTr = transactions.map(({ id, type, amount, currency }) => {
     return (
       <LiItemFourth key={id} type={type} amount={amount} currency={currency} />
     );
   });
   return (
-    <table className="transaction-history">
+    <table className={styles.transactionHistory}>
       <thead>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <th className={styles.th}>Type</th>
+          <th className={styles.th}>Amount</th>
+          <th className={styles.th}>Currency</th>
         </tr>
       </thead>
       <tbody>{markupTr}</tbody>
@@ -24,10 +24,14 @@ const TransactionHistory = () => {
 };
 
 TransactionHistory.propTypes = {
-  id: PropTypes.string,
-  type: PropTypes.string,
-  amount: PropTypes.number,
-  currency: PropTypes.string,
+  transactions: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      type: PropTypes.string,
+      amount: PropTypes.string,
+      currency: PropTypes.string,
+    }),
+  ),
 };
 
 export default TransactionHistory;

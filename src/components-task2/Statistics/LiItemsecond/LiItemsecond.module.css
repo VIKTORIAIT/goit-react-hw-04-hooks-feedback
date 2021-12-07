@@ -1,0 +1,17 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  width: calc(100% / 3);
+}
+
+.item:not(:last-child) {
+  border-right: gray solid 1px;
+}
+
+.percentage {
+  font-size: 18px;
+  font-weight: 700;
+}
