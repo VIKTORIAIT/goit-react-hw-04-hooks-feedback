@@ -3,11 +3,16 @@ import Descriptions from './Descriptions';
 import Stats from './Stats';
 import PropTypes from 'prop-types';
 
-const Profile = () => {
+const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <div className={styles.profile}>
-      <Descriptions />
-      <Stats />
+      <Descriptions
+        username={username}
+        tag={tag}
+        location={location}
+        avatar={avatar}
+      />
+      <Stats stats={stats} />
     </div>
   );
 };

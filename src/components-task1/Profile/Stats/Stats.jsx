@@ -1,9 +1,7 @@
 import styles from './Stats.module.css';
 import LiItem from './LiItem';
-import user from '../../../data/user.json';
 
-const Stats = () => {
-  const { stats } = user;
+const Stats = ({ stats }) => {
   return (
     <ul className={styles.stats}>
       <LiItem label="followers :" quantity={stats.followers} />

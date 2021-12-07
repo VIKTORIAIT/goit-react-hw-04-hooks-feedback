@@ -1,9 +1,8 @@
 import LiItemThird from './LiItemThird';
-import friends from '../../data/friendlist.json';
 import PropTypes from 'prop-types';
 import styles from './FriendList.module.css';
 
-const FriendList = () => {
+const FriendList = ({ friends }) => {
   const markupFriends = friends.map(({ avatar, name, isOnline, id }) => (
     <LiItemThird key={id} avatar={avatar} name={name} isOnline={isOnline} />
   ));

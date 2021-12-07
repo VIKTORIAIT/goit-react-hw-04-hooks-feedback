@@ -1,8 +1,8 @@
 import styles from './Descriptions.module.css';
-import user from '../../../data/user.json';
+// import user from '../../../data/user.json';
 
-const Descriptions = () => {
-  const { username, tag, location, avatar } = user;
+const Descriptions = ({ username, tag, location, avatar }) => {
+  // const { username, tag, location, avatar } = user;
   return (
     <div className={styles.description}>
       <img src={avatar} alt="User avatar" className={styles.avatar} />

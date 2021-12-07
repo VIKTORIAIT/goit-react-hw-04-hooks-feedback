@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
-import transactions from '../../data/transaction.json';
 import LiItemFourth from './LiItemFourth';
 import styles from './Transaction.module.css';
 
-const TransactionHistory = () => {
+const TransactionHistory = ({ transactions }) => {
   const markupTr = transactions.map(({ id, type, amount, currency }) => {
     return (
       <LiItemFourth key={id} type={type} amount={amount} currency={currency} />

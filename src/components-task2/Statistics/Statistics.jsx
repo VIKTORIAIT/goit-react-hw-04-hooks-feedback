@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
-import data from '../../data/data.json';
 import LiItemsecond from './LiItemsecond/LiItemsecond';
 import styles from './Statistics.module.css';
 
-const Statistics = ({ title }) => {
-  const markup = data.map(({ id, label, percentage }) => (
+const Statistics = ({ title, stats }) => {
+  const markup = stats.map(({ id, label, percentage }) => (
     <LiItemsecond key={id} label={label} percentage={percentage} />
   ));
   return (
@@ -16,7 +15,7 @@ const Statistics = ({ title }) => {
 };
 
 Statistics.propTypes = {
-  data: PropTypes.arrayOf(
+  stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
       label: PropTypes.string,
