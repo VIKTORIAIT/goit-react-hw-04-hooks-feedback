@@ -1,7 +1,0 @@
-.row {
-  text-transform: capitalize;
-}
-
-.row:nth-of-type(even) {
-  background-color: #dce1e5;
-}
