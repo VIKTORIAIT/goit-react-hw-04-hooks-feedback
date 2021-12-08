@@ -1,16 +1,17 @@
-import s from "./Section.module.css"
-import PropTypes from 'prop-types'
+import s from './Section.module.css';
+// import PropTypes from 'prop-types'
 
-const Section = ({title}) => {
-    return (
-        <>
-            <h2 className={s.mainTitle}>{title}</h2>
-        </>
-    )
-}
+const Section = ({ title, children }) => {
+  return (
+    <>
+      <h2 className={s.mainTitle}>{title}</h2>
+      {children}
+    </>
+  );
+};
 
-Section.propTypes = {
+// Section.propTypes = {
 
-}
+// }
 
-export default Section
+export default Section;
